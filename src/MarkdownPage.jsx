@@ -11,11 +11,19 @@ function MarkdownPage({ file }) {
 
   const formattedContent = content
     .replace(/!\[[^\]]*\]\((img_jerale\/[^)]+)\)/g, '![](/docs_jerale/$1)')
-    .replace(/!\[[^\]]*\]\(([^)]+\.png)\)/g, (match, p1) => {
-      if (p1.startsWith('/') || p1.startsWith('http')) {
+    .replace(/!\[[^\]]*\]\(([^)]+)\)/g, (match, p1) => {
+      if (p1.startsWith('/') || p1.startsWith('http') || p1.includes('://')) {
         return match
       }
-      return `![](/docs_jerale/img_jerale/${p1})`
+
+      const normalized = p1.replace(/^img_jerale\//, '')
+      const isImage = /\.(png|jpg|jpeg|gif|webp|svg)$/i.test(normalized)
+
+      if (!isImage) {
+        return match
+      }
+
+      return `![](/docs_jerale/img_jerale/${normalized})`
     })
 
   return (
