@@ -16,4 +16,3 @@ Se consolidó una wiki técnica sencilla que permite seguir el laboratorio paso 
 
 ![Vista general del laboratorio en VirtualBox](img_jerale/vista_general_laboratorio.png)
 
-![Inicio del servidor en el entorno virtual](img_jerale/servidor_inicio_laboratorio.png)

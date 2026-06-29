@@ -14,5 +14,5 @@ La comunicación entre el servidor y el cliente quedó estable, lo que permitió
 
 ## Evidencia
 
-![Prueba de conectividad entre servidor y cliente](img_jerale/servicios_redw10)
+![Prueba de conectividad entre servidor y cliente](img_jerale/servicios_redw10.png)
 
