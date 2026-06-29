@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/docs_jerale/:path*",
+      "destination": "/docs_jerale/:path*"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
